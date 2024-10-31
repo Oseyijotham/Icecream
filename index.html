@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Icecream</title>
+</head>
+<body>
+    <header class="header">
+    <div class="container header__container">    
+    <a class="logo" href="index.html">
+        <svg class="logo__icon" width="199" height="50">
+            <use href="./images/icons.svg#icon-logo"></use>
+        </svg>
+    </a>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">About Us</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">How it's made?</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Our products</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <button type="button" class="menu-button" header-window-open>
+    <svg width="20px" height="12px" class="menu-button__icon">
+      <use href="./images/icons.svg#icon-Burger"></use>
+    </svg>
+  </button>
+
+
+   <div class="menu menu__is-hidden" header-window>
+                <div class="header-window">
+                <button type="button" class="header-window__button" header-window-close>
+                    <svg width="14px" height="14px" class="header-window__close-icon">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg></button>
+
+                         <a class="header-window__link" href="#">
+                          <span class="header-window__items">
+                          <span class="header-window__label">Buy now</span>  
+                           <svg class="header-window__icon" width="5.26" height="8">
+                            <use href="./images/icons.svg#icon-Vector3"></use>
+                           </svg>
+                          </span>
+                         </a>
+
+                    <nav class="header-window__nav">
+                        <ul class="header-window__list">
+                    
+                            <li class="header-window__item"><a href="#" class="header-window__link-item">Home</a>
+                            </li>
+                            <li class="header-window__item"><a href="#" class="header-window__link-item">About us</a></li>
+                            <li class="header-window__item"><a href="#" class="header-window__link-item">How it's made</a></li>
+                            <li class="header-window__item"><a href="#" class="header-window__link-item">Our products</a></li>
+                            <li class="header-window__item"><a href="#" class="header-window__link-item">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>  
+            <script src="js/header-window.js" type="module"></script>
+
+
+    <a class="action-link" href="#">
+                          <span class="action-link__items">
+                          <span class="action-link__label">Buy now</span>  
+                           <svg class="action-link__icon" width="5.5" height="8">
+                            <use href="./images/icons.svg#icon-Vector3"></use>
+                           </svg>
+                          </span>
+                         </a>
+<div class="company-ad">
+        <!--<div class="company__ad--pic"></div>-->
+         <picture>
+                        <source
+                        srcset="
+                      ./images/slider-pic2a.png 1x,
+                      ./images/slider-pic2a@2x.png 2x
+                    "
+                         media="(min-width: 1280px)"
+                        />
+
+                        <source
+                            srcset="
+                      ./images/slider-pic2a_tablet.png 1x,
+                      ./images/slider-pic2a_tablet@2x.png 2x
+                    "
+                         media="(min-width: 768px)"
+                        />
+
+                          <source
+                            srcset="
+                      ./images/slider-pic2a_mobile.png 1x,
+                      ./images/slider-pic2a_mobile@2x.png 2x
+                    "
+                         media="(max-width: 767px)"
+                        />
+
+                        <img class="company-ad__pic" src="./images/slider-pic2a_mobile.png" alt="advert">
+                        </picture>
+    </div>
+   
+    </div>
+
+    </header>
+    <main>
+       <section class="hero">
+        <div class="hero__container container">
+       <div class="hero__wrapper"> 
+      <h1 class="hero__title">ICE CREAM</h1>
+      <h1 class="hero__title">MADE WITH</h1>
+      <h1 class="hero__title hero__title--highlight">PASSION</h1>
+      <div class="action-area">
+        <a href="#" class="action-area__link">Products</a>
+        <a href="#" class="action-area__link">How it's Made?</a>
+      </div>
+
+      <div class="product">
+      <div class="product__image">
+                         <picture>
+                        <source
+                        srcset="
+                      ./images/slider-pic.png 1x,
+                      ./images/slider-pic@2x.png 2x
+                    "
+                         media="(min-width: 1280px)"
+                        />
+
+                        <source
+                            srcset="
+                      ./images/slider-pic_tablet.png 1x,
+                      ./images/slider-pic_tablet@2x.png 2x
+                    "
+                         media="(min-width: 768px)"
+                        />
+
+                        <img src="./images/slider-pic_tablet.png" alt="Company Product">
+                        </picture>
+      </div>
+      <div class="product__content">
+        <p class="product__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <a href="#" class="product__link">
+           <picture>
+                        <source
+                        srcset="
+                      ./images/arrow-right.png 1x,
+                      ./images/arrow-right@2x.png 2x
+                    "
+                         media="(min-width: 1280px)"
+                        />
+
+                        <source
+                            srcset="
+                      ./images/arrow-right_tablet.png 1x,
+                      ./images/arrow-right_tablet@2x.png 2x
+                    "
+                         media="(min-width: 768px)"
+                        />
+
+                        <img src="./images/arrow-right_tablet.png" alt="arrow-right">
+                        </picture>
+          
+        </a>
+      </div>
+    </div>
+       </div>
+
+       <div class="company">
+       <div class="company__info">
+        <span class="company__info--num">
+        <span class="company__info--cafes">16</span>    
+        <span class="company__info--text">cafes</span>
+        </span>
+        <svg class="company__info--icon">
+            <use href="./images/icons.svg#icon-Ellipse"></use>
+        </svg>
+       </div>
+       
+
+       <div class="company__info">
+        <span class="company__info--num">
+        <span class="company__info--trucks">23</span> 
+        <span class="company__info--text">food trucks</span>
+        </span>
+        <svg class="company__info--icon">
+            <use href="./images/icons.svg#icon-Ellipse"></use>
+        </svg>
+       </div>
+       
+
+       </div>
+
+    
+    <div class="customer__illustration">
+      <picture>
+                        <source
+                        srcset="
+                      ./images/slider-pic3.png 1x,
+                      ./images/slider-pic3@2x.png 2x
+                    "
+                         media="(min-width: 1280px)"
+                        />
+
+                        <source
+                            srcset="
+                      ./images/slider-pic3_tablet.png 1x,
+                      ./images/slider-pic3_tablet@2x.png 2x
+                    "
+                         media="(min-width: 768px)"
+                        />
+
+                        <img src="./images/slider-pic3_tablet.png" alt="customer">
+                        </picture>
+    </div>
+    </div>
+    </section>
+
+    <section class="products">
+        <div class="products__container container">
+         <h2 class="products__description">100% natural</h2>
+         <h2 class="products__heading">PRODUCTS</h2>
+        <ul class="products__illustrations">
+          <li class="products__illustrations--item">
+             <div class="products__illustrations--cover">
+                 <picture>
+                        <source
+                        srcset="
+                      ./images/product-pic1.jpg 1x,
+                      ./images/product-pic1@2x.png 2x
+                    "
+                         media="(min-width: 1280px)"
+                        />
+
+                        <source
+                            srcset="
+                      ./images/product-pic1_tablet.png 1x,
+                      ./images/product-pic1_tablet@2x.png 2x
+                    "
+                         media="(min-width: 768px)"
+                        />
+
+                          <source
+                            srcset="
+                      ./images/product-pic1_mobile.png 1x,
+                      ./images/product-pic1_mobile@2x.jpg 2x
+                    "
+                         media="(min-width: 320px)"
+                        />
+
+                         <img src="./images/product-pic1_mobile.png" alt="product">
+                        </picture>
+             
+             </div>
+             <div class="products__illustrations--info">
+               <h3 class="products__illustrations--heading">ICE CREAM</h3>
+               <svg class="products__illustrations--icon">
+                 <use href="./images/icons.svg#icon-Group-4"></use>
+               </svg>
+                <div class="products__illustrations--details">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                </div>
+                <a href="#" class="products__illustrations--nav">
+                  <img src="./images/arrow-right2.jpg" 
+                     srcset="./images/arrow-right2@2x.png 2x" 
+                     alt="arrow-right">
+                </a>
+             </div>
+          </li>
+          <li class="products__illustrations--item">
+             <div class="products__illustrations--cover">
+               <picture>
+                        <source
+                        srcset="
+                      ./images/product-pic2.jpg 1x,
+                      ./images/product-pic2@2x.png 2x
+                    "
+                         media="(min-width: 1280px)"
+                        />
+
+                        <source
+                            srcset="
+                      ./images/product-pic2_tablet.png 1x,
+                      ./images/product-pic2_tablet@2x.png 2x
+                    "
+                         media="(min-width: 768px)"
+                        />
+
+                          <source
+                            srcset="
+                      ./images/product-pic2_mobile.png 1x,
+                      ./images/product-pic2_mobile@2x.png 2x
+                    "
+                         media="(min-width: 320px)"
+                        />
+
+                         <img src="./images/product-pic2_mobile.png" alt="product">
+                        </picture>
+             </div>
+            <div class="products__illustrations--info">
+              <h3 class="products__illustrations--heading">ICE CREAM</h3>
+              <svg class="products__illustrations--icon">
+                <use href="./images/icons.svg#icon-Group-4"></use>
+              </svg>
+              <div class="products__illustrations--details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              </div>
+            <a href="#" class="products__illustrations--nav">
+              <img src="./images/arrow-right2.jpg" 
+                     srcset="./images/arrow-right2@2x.png 2x" 
+                     alt="arrow-right">
+            </a>
+            </div>
+          </li>
+          <li class="products__illustrations--item">
+             <div class="products__illustrations--cover">
+               <picture>
+                        <source
+                        srcset="
+                      ./images/product-pic3.jpg 1x,
+                      ./images/product-pic3@2x.png 2x
+                    "
+                         media="(min-width: 1280px)"
+                        />
+
+                        <source
+                            srcset="
+                      ./images/product-pic3_tablet.png 1x,
+                      ./images/product-pic3_tablet@2x.png 2x
+                    "
+                         media="(min-width: 768px)"
+                        />
+
+                          <source
+                            srcset="
+                      ./images/product-pic3_mobile.png 1x,
+                      ./images/product-pic3_mobile@2x.png 2x
+                    "
+                         media="(min-width: 320px)"
+                        />
+
+                         <img src="./images/product-pic3_mobile.png" alt="product">
+                        </picture>
+             </div>
+            <div class="products__illustrations--info">
+              <h3 class="products__illustrations--heading">ICE CREAM</h3>
+              <svg class="products__illustrations--icon">
+                <use href="./images/icons.svg#icon-Group-4"></use>
+              </svg>
+            <div class="products__illustrations--details">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            </div>
+            <a href="#" class="products__illustrations--nav">
+              <img src="./images/arrow-right2.jpg" 
+                     srcset="./images/arrow-right2@2x.png 2x" 
+                     alt="arrow-right">
+            </a>
+            </div>
+          </li>
+        </ul>
+        </div>
+    </section>
+
+    <section class="production">
+      <div class="production__container container">
+        <h3 class="production__slogan">tradition and love</h3>
+        <h2 class="production__heading">how it's made?</h2>
+      </div>
+      <div class="production__background">
+
+      <div class="production__image">
+        <picture>
+        <source
+                        srcset="
+                      ./images/productionsection2.png 1x,
+                      ./images/productionsection2@2x.png 2x
+                    "
+                         media="(min-width: 1280px)"
+                        />
+
+                        <source
+                            srcset="
+                      ./images/productionsection2_tablet.png 1x,
+                      ./images/productionsection2_tablet@2x.png 2x
+                    "
+                         media="(min-width: 768px)"
+                        />
+
+                          <source
+                            srcset="
+                      ./images/productionsection2_mobile.png 1x,
+                      ./images/productionsection2_mobile@2x.png 2x
+                    "
+                         media="(min-width: 320px)"
+                        />
+                        <img src="./images/productionsection2_mobile.png " alt="production-pic">
+        </picture>
+      </div>
+      <div class="production__details">
+        <div class="production__background-mobile">
+        <picture>
+           <source
+                            srcset="
+                      ./images/productionsection1_mobile.png 1x,
+                      ./images/productionsection1_mobile@2x.png 2x
+                    "
+                         media="(min-width: 320px)"
+                        />
+        <img src="images/productionsection1_mobile.png" />
+        </picture>
+        </div>
+        <p class="production__details--start">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
+        Maecenas eleifend erat at justo fringilla.
+        </p>
+        <p class="production__details--end">
+        Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
+
+        Aliquam erat volutpat. Aenean accumsan.
+        </p>
+        <a href="#" class="production__details--nav">
+          <span class="production__details--text">
+          Read more
+          </span>
+          <svg class="production__details--icon" width="8" height="10">
+            <use href="./images/icons.svg#icon-Vector3"></use>
+          </svg>
+        </a>
+      </div>
+      </div>
+      <div class="production__formula container">
+        <div class="production__formula--item">
+          <svg class="production__formula--icon1">
+            <use href="./images/icons.svg#icon-formula1"></use>
+          </svg>
+          <h2 class="production__formula--number">721</h2>
+          <p class="production__formula--text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+        </div>
+        <div class="production__formula--item">
+          <svg class="production__formula--icon2">
+            <use href="./images/icons.svg#icon-formula2"></use>
+          </svg>
+          <h2 class="production__formula--number">16kg</h2>
+          <p class="production__formula--text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+        </div>
+        <div class="production__formula--item">
+          <svg class="production__formula--icon3">
+            <use href="./images/icons.svg#icon-formula3"></use>
+          </svg>
+          <h2 class="production__formula--number">84</h2>
+          <p class="production__formula--text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+        </div>
+      </div>
+      <div class="gallery">
+       <picture>
+        <source
+                        srcset="
+                      ./images/gallery.png 1x,
+                      ./images/gallery@2x.png 2x
+                    "
+                         media="(min-width: 1280px)"
+                        />
+
+                        <source
+                            srcset="
+                      ./images/gallery_tablet.png 1x,
+                      ./images/gallery_tablet@2x.png 2x
+                    "
+                         media="(min-width: 768px)"
+                        />
+
+                          <source
+                            srcset="
+                      ./images/gallery_mobile.png 1x,
+                      ./images/gallery_mobile@2x.png 2x
+                    "
+                         media="(min-width: 320px)"
+                        />
+                        <img src="./images/gallery_mobile.png " alt="samples-pic" class="galllery__pics">
+        </picture>
+</div>
+      <div class="testimonials container">
+      <div class="testimonial__modal">
+        <img class="testimonial__image" src="./images/testimonial1.jpg" srcset="./images/testimonial1@2x.png 2x" alt="customer-pic">
+        <div class="testimonial__label">
+          <svg class="testimonial__text--icon">
+           <use href="./images/icons.svg#icon-comma"></use>
+          </svg>
+          <svg class="testimonial__underline1">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+
+          <svg class="testimonial__underline2">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline3">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline4">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline5">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline6">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline7">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline8">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+        <p class="testimonial__text">
+          Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan
+          congue. Lorem ipsum primis in nibh vel risus.
+        </p>
+        </div>
+        <svg class="testimonial__icon" width="32" height="4">
+          <use href="./images/icons.svg#icon-Group8"></use>
+        </svg>
+        <p class="testimonial__bio">Emily, Los Angeles</p>
+         <div class="testimonial__nav">
+          <svg class="testimonial__nav--icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-Frame1"></use>
+          </svg>
+          <svg class="testimonial__nav--icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-testimonial-circle"></use>
+          </svg>
+          <svg class="testimonial__nav--icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-testimonial-circle"></use>
+          </svg>
+          </div>
+      </div>
+      <div class="testimonial__modal">
+        <img class="testimonial__image" src="./images/testimonial2.jpg" srcset="./images/testimonial2@2x.png 2x" alt="customer-pic">
+        <div class="testimonial__label">
+         <svg class="testimonial__text--icon" width="54px" height="40px">
+           <use href="./images/icons.svg#icon-comma"></use>
+          </svg>
+          <svg class="testimonial__underline1">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+
+          <svg class="testimonial__underline2">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline3">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline4">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline5">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline6">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline7">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline8">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+        <p class="testimonial__text">
+          Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan
+          congue. Lorem ipsum primis in nibh vel risus.
+        </p>
+        </div>
+        <svg class="testimonial__icon" width="32" height="4">
+          <use href="./images/icons.svg#icon-Group8"></use>
+        </svg>
+        <p class="testimonial__bio">Emily, Los Angeles</p>
+         <div class="testimonial__nav">
+          <svg class="testimonial__nav--icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-testimonial-circle"></use>
+          </svg>
+          <svg class="testimonial__nav--icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-Frame1"></use>
+          </svg>
+          <svg class="testimonial__nav--icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-testimonial-circle"></use>
+          </svg>
+          </div>
+      </div>
+      <div class="testimonial__modal">
+        <img class="testimonial__image" src="./images/testimonial3.jpg" srcset="./images/testimonial3@2x.png 2x" alt="customer-pic">
+        <div class="testimonial__label">
+          <svg class="testimonial__text--icon" width="54px" height="40px">
+           <use href="./images/icons.svg#icon-comma"></use>
+          </svg>
+        <svg class="testimonial__underline1">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+
+          <svg class="testimonial__underline2">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline3">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline4">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline5">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline6">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline7">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+          <svg class="testimonial__underline8">
+           <use href="./images/icons.svg#icon-longline1"></use>
+          </svg>
+        <p class="testimonial__text">
+          Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan
+          congue. Lorem ipsum primis in nibh vel risus.
+        </p>
+        </div>
+        
+        <svg class="testimonial__icon" width="32" height="4">
+          <use href="./images/icons.svg#icon-Group8"></use>
+        </svg>
+        <p class="testimonial__bio">Emily, Los Angeles</p>
+        <div class="testimonial__nav">
+          <svg class="testimonial__nav--icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-testimonial-circle"></use>
+          </svg>
+          <svg class="testimonial__nav--icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-testimonial-circle"></use>
+          </svg>
+          <svg class="testimonial__nav--icon" width="12" height="12">
+            <use href="./images/icons.svg#icon-Frame1"></use>
+          </svg>
+          </div>
+         
+      </div>
+      </div>
+       <div class="schedule schedule__container">
+            <div class="schedule__cafe">
+              <h3 class="schedule__cafe--heading">CAFE</h3>
+              <span class="schedule__cafe--location">Chicago</span>
+              <p class="schedule__cafe--description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+              <svg class="schedule__cafe--topicon">
+                <use href="./images/icons.svg#icon-line"></use>
+              </svg>
+               <svg class="schedule__cafe--bottomicon">
+                <use href="./images/icons.svg#icon-line"></use>
+              </svg>
+              <span class="schedule__cafe--weekdays">Monday - Friday</span>
+              <span class="schedule__cafe--times">06:00 AM - 10:00 PM</span>
+              <span class="schedule__cafe--weekends">Saturday - Sunday</span>
+              <span class="schedule__cafe--times">08:00 AM - 16:00 PM</span>
+              <a class="schedule__cafe--number" href="">+61(0) 383 766 284</a>
+              <a class="schedule__cafe--email" href="">noreply@envato.com</a>
+            </div>
+            <div class="schedule__foodtruck">
+             <h3 class="schedule__foodtruck--heading">FOOD TRUCK</h3>
+              <span class="schedule__foodtruck--location">Los Angeles</span>
+              <p class="schedule__foodtruck--description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+              <svg class="schedule__foodtruck--topicon" width="288" height="2">
+                <use href="./images/icons.svg#icon-line"></use>
+              </svg>
+               <svg class="schedule__foodtruck--bottomicon" width="288" height="2">
+                <use href="./images/icons.svg#icon-line"></use>
+              </svg>
+              <span class="schedule__foodtruck--weekdays">Monday - Friday</span>
+              <span class="schedule__foodtruck--times">06:00 AM - 10:00 PM</span>
+              <span class="schedule__foodtruck--weekends">Saturday - Sunday</span>
+              <span class="schedule__foodtruck--times">08:00 AM - 16:00 PM</span>
+              <a class="schedule__foodtruck--number" href="">+61(0) 383 766 284</a>
+              <a class="schedule__foodtruck--email" href="">noreply@envato.com</a>
+            </div>
+            <div class="schedule__cafe--last">
+              <h3 class="schedule__cafe--heading">CAFE</h3>
+              <span class="schedule__cafe--location">New York</span>
+              <p class="schedule__cafe--description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+              <svg class="schedule__cafe--topicon" width="288" height="2">
+                <use href="./images/icons.svg#icon-line"></use>
+              </svg>
+               <svg class="schedule__cafe--bottomicon" width="288" height="2">
+                <use href="./images/icons.svg#icon-line"></use>
+              </svg>
+              <span class="schedule__cafe--weekdays">Monday - Friday</span>
+              <span class="schedule__cafe--times">06:00 AM - 10:00 PM</span>
+              <span class="schedule__cafe--weekends">Saturday - Sunday</span>
+              <span class="schedule__cafe--times">08:00 AM - 16:00 PM</span>
+              <a class="schedule__cafe--number" href="#">+61(0) 383 766 284</a>
+              <a class="schedule__cafe--email" href="#">noreply@envato.com</a>
+            </div>
+            </div>
+           <div class="outlets">
+              <a href="#" class="outlets__locations">
+                <span class="outlets__location-wrapper">
+                <span class="outlets__locations--text">Our Locations</span>
+                <svg class="outlets__locations--icon">
+                  <use href="./images/icons.svg#icon-Vector3"></use>
+                </svg>
+                </span>
+              </a>
+              <a href="#" class="outlets__info">
+                <span class="outlets__info-wrapper">
+                <span class="outlets__info--text">Franchise</span>
+                <svg class="outlets__info--icon">
+                  <use href="./images/icons.svg#icon-Vector3"></use>
+                </svg>
+                </span>
+              </a>
+            </div>
+    </section>
+    </main>
+    <footer>
+     <div>
+      <div class="footer__top footer__container">
+      <div class="footer__slogan">
+       <h3 class="footer__slogan--top">homemade ice cream made</h3>
+       <h2 class="footer__slogan--bottom"><span>with</span><span>passion</span></h2>
+       </div>
+       <div class="footer__contacts">
+          <div class="footer__socials">
+         <a class="footer__socials--links" href="#">
+          <svg class="footer__socials--icon-git">
+          <use href="./images/icons.svg#icon-github"></use>
+         </svg>
+        </a>
+        <a class="footer__socials--links" href="#">
+         <svg class="footer__socials--icon-telegram">
+          <use href="./images/icons.svg#icon-telegram2"></use>
+         </svg>
+         </a>
+         <a class="footer__socials--links" href="#">
+         <svg class="footer__socials--icon-facebook">
+          <use href="./images/icons.svg#icon-facebook2"></use>
+         </svg>
+         </a>
+        </div>
+        <div class="footer__contacts--item-wrapper"><a class="footer__contacts--item" href="tel:+61 (0) 383 766 284">
+          <span class="footer__contacts--label">Feel free to contact </span>
+          <span class="footer__contacts--number">+61 (0) 383 766 284</span>
+        </a>
+        </div>
+       </div>
+       </div>
+
+       <div class="footer__bottom">
+        <svg class="footer__bottom--line">
+          <use href="./images/icons.svg#icon-footerline"></use>
+        </svg>
+        <span class="footer__bottom--text"> <span>© 2022 - IceCream.</span> <span>Rights Reserved.</span> </span>
+       </div>
+     </div>
+    </footer>
+    <script src="./js/testimonials.js" type="module"></script>
+</body>
+</html>
