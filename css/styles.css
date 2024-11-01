@@ -24,6 +24,10 @@ body {
     background-color: #FFB8CA;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 
 
 .container {
@@ -142,7 +146,7 @@ body {
   z-index: 100;
   transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), left 1250ms cubic-bezier(0.4, 0, 0.2, 1),visibility 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu__is-hidden {
+.menu--hidden {
   opacity: 0;
   visibility: hidden;
   left: 100%;
@@ -201,7 +205,7 @@ fill: #D41443;
 stroke: #fff;
 }
 
-.header-window__items{
+.header-window__link-content{
     display: flex;
     align-items: center;
     padding-left: 48.64px;
@@ -222,13 +226,13 @@ stroke: #fff;
     width: 100%;
 }
 
-.header-window__list{
+.header-window__nav-list{
     display: flex;
     flex-direction: column;
     gap:22px;
 }
 
-.header-window__item{
+.header-window__nav-item{
     padding-left: 20px;
     padding-top: 13px;
     padding-bottom: 11px;
@@ -237,7 +241,7 @@ stroke: #fff;
     border-bottom: 1px solid #E18298;
 }
 
-.header-window__link-item{
+.header-window__nav-link{
     font-family: "DM Sans";
     font-size: 14px;
     font-weight: 700;
@@ -245,7 +249,7 @@ stroke: #fff;
     color:#fff;
 }
 
-.header-window__link-item:hover,.header-window__link-item:hover{
+.header-window__nav-link:hover,.header-window__nav-link:hover{
     color:#D41443;
 }
 
@@ -614,12 +618,12 @@ justify-content: center;
 }
 }
 
-.company__info--icon {
+.company__info-icon {
   margin-left: auto;
   fill:#FFF;}
 
         @media screen and (min-width: 768px) {
-            .company__info--icon {
+            .company__info-icon {
         height: 16px;
         width: 16px;
         margin-bottom: 18px;  
@@ -627,23 +631,23 @@ justify-content: center;
 
     
     @media screen and (min-width: 1280px) {
-        .company__info--icon {
+        .company__info-icon {
     height: 30px;
     width: 30px;
     margin-bottom: 27px;   
 }
 }
 
-.company__info--cafes{
+.company__info-digit{
     letter-spacing: 0.04em;
 }
 
-.company__info--trucks {
+.company__info-num {
     padding-left: 27px;
     letter-spacing: 1.84px;
 }
 
-.company__info--text {
+.company__info-text {
     color: #FFF;
     text-align: right;
     font-family: "DM Sans";
@@ -655,7 +659,7 @@ justify-content: center;
     display: block;}
     
        @media screen and (min-width: 768px) {
-        .company__info--text {
+        .company__info-text {
         font-size: 8px;
         line-height: calc(10.42 / 8);
         }
@@ -663,7 +667,7 @@ justify-content: center;
 
 
        @media screen and (min-width: 1280px) {
-        .company__info--text {
+        .company__info-text {
         font-size: 14px;
         line-height: calc(18.23 / 14);
         margin-top: 2px;
@@ -711,8 +715,27 @@ justify-content: center;
     }
     }
 
+.products__heading-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  margin-bottom: 8px;
+}   
 
-.products__description {
+ @media screen and (min-width: 768px) {
+            .products__heading-wrapper{
+        gap:18px;
+        margin-bottom: 20px;
+    }
+    }
+
+       @media screen and (min-width: 1280px) {
+        .products__heading-wrapper{
+     gap:16px;
+    }}
+
+
+.products__heading {
     color: #FFA5BA;
         text-align: center;
         font-family: "Titan One";
@@ -720,48 +743,39 @@ justify-content: center;
      line-height: calc(20.61 / 18);
         font-style: normal;
         font-weight: 400;
-        margin-bottom: 15px;
         letter-spacing: 0.04em;
         text-transform: uppercase;}
 
 
         @media screen and (min-width: 768px) {
-            .products__description{
+            .products__heading{
         font-size: 26px;
      line-height: calc(29.77 / 26);
-     margin-bottom: 18px;}
+     }
     }
 
        @media screen and (min-width: 1280px) {
-        .products__description{
+        .products__heading{
      font-size: 30px;
      line-height: calc(34.35 / 30);
-     margin-bottom: 16px;
     }}
 
 
 
-.products__heading{
+.products__heading--highlight{
     color: #D41443;
-        text-align: center;
-        font-family: "Titan One";
-        font-style: normal;
-        font-weight: 400;
-         font-size: 34px;
-     line-height: calc(38.93 / 34);
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        margin-bottom: 8px;}
+        font-size: 34px;
+        line-height: calc(38.93 / 34);
+        }
 
             @media screen and (min-width: 768px) {
-                .products__heading{
+                .products__heading--highlight{
         font-size: 48px;
      line-height: calc(54.96 / 48);
-     margin-bottom: 20px;
     }}
 
        @media screen and (min-width: 1280px) {
-        .products__heading{
+        .products__heading--highlight{
      font-size: 58px;
      line-height: calc(66.41 / 58);
     }
@@ -785,30 +799,33 @@ justify-content: center;
   }
 }
 
-.products__illustrations--item {
+.products__illustrations-item {
     position: relative;
 }
 
 @media screen and (max-width: 767px) {
-  .products__illustrations--item {
+  .products__illustrations-item {
     width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
-  .products__illustrations--item {
+  .products__illustrations-item {
     flex-basis: calc((100% - 32px) / 3);
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .products__illustrations--item {
+  .products__illustrations-item {
     flex-basis: calc((100% - 64px) / 3);
   }
 }
 
+.products__illustrations-cover{
+    position: absolute;
+    z-index: 2;
+}
 
-
-.products__illustrations--info{
+.products__illustrations-info{
 
     border-radius: 24px;
     background: #FFB8CA;
@@ -820,33 +837,30 @@ justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
-  .products__illustrations--info{
+  .products__illustrations-info{
     margin-top: 138px;
     padding-top: 118px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .products__illustrations--info{
+  .products__illustrations-info{
     margin-top: 261px;
     padding-top: 165px;
   }
 }
 
-.products__illustrations--cover{
-    position: absolute;
-    z-index: 2;
-}
 
-.products__illustrations--item:nth-child(2) > .products__illustrations--info{
+
+.products__illustrations-item:nth-child(2) > .products__illustrations-info{
     background: #F0D1A5;
 }
 
-.products__illustrations--item:last-child > .products__illustrations--info {
+.products__illustrations-item:last-child > .products__illustrations-info {
     background: #C2E297;
 }
 
-.products__illustrations--heading {
+.products__illustrations-heading {
     color: #FFF;
         text-align: center;
         font-family: "Titan One";
@@ -860,14 +874,14 @@ justify-content: center;
 }
 
 @media screen and (min-width: 1280px) {
-  .products__illustrations--heading{
+  .products__illustrations-heading{
    font-size: 30px;
     line-height: calc(34.35/30);
   }
 }
 
 
-.products__illustrations--icon{
+.products__illustrations-icon{
     margin-top: 32px;
     display: block;
     margin-left: auto;
@@ -876,20 +890,20 @@ justify-content: center;
 }
 
 @media screen and (max-width: 1279px) {
-  .products__illustrations--icon{
+  .products__illustrations-icon{
    width: 26px;
    height: 6px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .products__illustrations--icon{
+  .products__illustrations-icon{
    width: 24.836px;
    height: 6px;
   }
 }
 
-.products__illustrations--details{
+.products__illustrations-details{
     
     color: #FFF;
         text-align: center;
@@ -906,7 +920,7 @@ justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
-  .products__illustrations--details{
+  .products__illustrations-details{
    line-height: calc(24.64/14);
    padding-left: 32px;
    padding-right: 32px;
@@ -914,7 +928,7 @@ justify-content: center;
 }
 
 @media screen and (min-width: 1280px) {
-  .products__illustrations--details{
+  .products__illustrations-details{
     font-size: 16px;
    line-height: calc(28.16 / 16);
    padding-left: 64px;
@@ -922,12 +936,11 @@ justify-content: center;
   }
 }
 
-.products__illustrations--nav {
+.products__illustrations-nav {
     
     width: 40px;
     height: 40px;
     display: block;
-    /*This is for making the anchor tag a block level element so that it can have a width and height*/
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
@@ -989,7 +1002,20 @@ justify-content: center;
   }
 }
 
-.production__slogan{
+.production__heading-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+
+@media screen and (min-width: 768px) {
+.production__heading-wrapper{
+    gap: 16px;
+}
+}
+
+
+.production__heading{
     color: #FFA5BA;
         text-align: center;
         font-family: "Titan One";
@@ -1001,7 +1027,7 @@ justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
-.production__slogan{
+.production__heading{
     color: #FFA5BA;
         font-size: 26px;
         line-height: calc(29.77/26);
@@ -1009,27 +1035,23 @@ justify-content: center;
 }
 
 @media screen and (min-width: 1280px) {
-.production__slogan{
+.production__heading{
     color: #FFA5BA;
         font-size: 30px;
         line-height: calc(34.35/30);
 }
 }
 
-.production__heading{
+.production__heading--highlight{
     color: #D41443;
-        text-align: center;
-        font-family: "Titan One";
-        font-style: normal;
-        font-weight: 400;
         font-size: 34px;
         line-height: calc(38.93/34);
         letter-spacing: 0.04em;
-        text-transform: uppercase;
+        
 }
 
 @media screen and (min-width: 768px) {
-.production__heading{
+.production__heading--highlight{
         color: #D41443;
         font-size: 48px;
         line-height: calc(54.96/48);
@@ -1037,7 +1059,7 @@ justify-content: center;
 }
 
 @media screen and (min-width: 1280px) {
-.production__heading{
+.production__heading--highlight{
         color: #D41443;
         font-size: 58px;
         line-height: calc(66.41/58);
@@ -1120,17 +1142,7 @@ background-size: 1200px 521px;
 
 
 
-.production__background-mobile{
-  position: absolute;
-  top:71px;
-  z-index: -1;
-}
 
-@media screen and (min-width: 768px) {
-  .production__background-mobile{
-  display: none;
-}
-}
 
 .production__image{
     flex-shrink: 0;
@@ -1144,7 +1156,19 @@ background-size: 1200px 521px;
     /*margin-top: 90px;*/
 }
 
-.production__details--start{
+.production__background-mobile{
+  position: absolute;
+  top:71px;
+  z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .production__background-mobile{
+  display: none;
+}
+}
+
+.production__details-start{
     
     /*width: 463px;*/
     
@@ -1158,13 +1182,13 @@ background-size: 1200px 521px;
 }
 
 @media screen and (max-width: 767px) {
-  .production__details--start{
+  .production__details-start{
   width: 220px;
 }
 }
 
 @media screen and (min-width: 768px) {
-  .production__details--start{
+  .production__details-start{
   font-size: 14px;
   line-height: calc(24.64/14);
   width: 334px;
@@ -1172,7 +1196,7 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 1280px) {
-  .production__details--start{
+  .production__details-start{
   font-size: 16px;
   line-height: calc(28.16/16);
   letter-spacing: 0.04em;
@@ -1180,7 +1204,7 @@ background-size: 1200px 521px;
 }
 }
 
-.production__details--end{
+.production__details-end{
     /*width: 463px;*/
     color: #907E82;
         font-family: "DM Sans";
@@ -1195,13 +1219,13 @@ background-size: 1200px 521px;
 
 
 @media screen and (max-width: 767px) {
-  .production__details--end{
+  .production__details-end{
   width: 220px;
 }
 }
 
 @media screen and (min-width: 768px) {
-  .production__details--end{
+  .production__details-end{
   font-size: 14px;
   line-height: calc(24.64/14);
   width: 334px;
@@ -1212,7 +1236,7 @@ background-size: 1200px 521px;
 
 
 @media screen and (min-width: 1280px) {
-  .production__details--end{
+  .production__details-end{
   font-size: 14px;
   line-height: calc(27.16/14);
   letter-spacing: 0.04em;
@@ -1220,7 +1244,7 @@ background-size: 1200px 521px;
 }
 }
 
-.production__details--nav{
+.production__details-link{
         color: #fff;
         display: inline-block;
         font-family: "DM Sans";
@@ -1240,26 +1264,28 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 768px) {
-  .production__details--nav{
+  .production__details-link{
         margin-bottom: 60px;
   
 }
 }
 
-.production__details--nav:hover{
+.production__details-link:hover{
        background-color: #FFF;
        color: #D41443;
        fill: #FFF;
        stroke: #D41443;
 }
 
-.production__details--icon{
+.production__details-label{
+    margin-right: 13.62px;
+}
+
+.production__details-icon{
         stroke-width: 2px;
 }
 
-.production__details--text{
-    margin-right: 13.62px;
-}
+
 
 /*.production__formula{
     display: grid;
@@ -1294,25 +1320,25 @@ background-size: 1200px 521px;
 }
 }
 
-.production__formula--item{
+.production__formula-item{
    
 }
 
 @media screen and (min-width: 1280px) {
- .production__formula--item:nth-child(1) {
+ .production__formula-item:nth-child(1) {
   margin-right: 115px;
 }
 }
 
 @media screen and (min-width: 1280px) {
- .production__formula--item:nth-child(2) {
+ .production__formula-item:nth-child(2) {
   margin-right: 80px;
 }
 }
 
 
 
-.production__formula--icon1{
+.production__formula-icon1{
     width:33px;
     height:50px;
     fill:#FFA5BA;
@@ -1320,7 +1346,7 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 768px) {
-  .production__formula--icon1{
+  .production__formula-icon1{
    width:50px;
    height:50px;
    margin-bottom: 36px;
@@ -1328,12 +1354,12 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 1280px) {
-  .production__formula--icon1{
+  .production__formula-icon1{
    margin-bottom: 40px;
 }
 }
 
-.production__formula--icon2{
+.production__formula-icon2{
     width:49.69px;
     height:50px;
     fill:#FFA5BA;
@@ -1341,7 +1367,7 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 768px) {
-  .production__formula--icon2{
+  .production__formula-icon2{
    width:50px;
    height:50px;
    margin-bottom: 36px;
@@ -1349,12 +1375,12 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 1280px) {
-  .production__formula--icon2{
+  .production__formula-icon2{
    margin-bottom: 40px;
 }
 }
 
-.production__formula--icon3{
+.production__formula-icon3{
     width:44px;
     height:50px;
     fill:#FFA5BA;
@@ -1362,7 +1388,7 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 768px) {
-  .production__formula--icon3{
+  .production__formula-icon3{
    width:44px;
    height:50px;
    margin-bottom: 36px;
@@ -1370,13 +1396,13 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 1280px) {
-  .production__formula--icon3{
+  .production__formula-icon3{
    margin-bottom: 40px;
 }
 }
 
 
-.production__formula--number{
+.production__formula-number{
     color: #D41443;
         font-family: "Titan One";
         font-size: 36px;
@@ -1389,20 +1415,20 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 768px) {
-  .production__formula--number{
+  .production__formula-number{
    font-size: 48px;
    line-height: calc(54.96/48);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .production__formula--number{
+  .production__formula-number{
    font-size: 58px;
    line-height: calc(66.41/58);
 }
 }
 
-.production__formula--text{
+.production__formula-text{
     color: #000;
         font-family: "DM Sans";
         font-size: 12px;
@@ -1415,7 +1441,7 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 768px) {
-  .production__formula--text{
+  .production__formula-text{
    font-size: 14px;
    line-height: calc(24.36/14);
    width: 180px;
@@ -1424,7 +1450,7 @@ background-size: 1200px 521px;
 }
 
 @media screen and (min-width: 1280px) {
-  .production__formula--text{
+  .production__formula-text{
    font-size: 16px;
    line-height: calc(28.16/16);
    width: 288px;
@@ -1450,7 +1476,7 @@ background-size: 1200px 521px;
 }
 
 
-.testimonials{
+.testimonial{
  margin-bottom: 120px;   
 }
 
@@ -1503,16 +1529,17 @@ margin-top: 16px;
 }
 }
 
-.testimonial__text--icon{
+.testimonial__text-icon{
 position: absolute;
 top: 30px;
 left:53px;
 width:54px;
 height:40px;
+fill: #E1E1E1;
 }
 
 @media screen and (min-width: 768px) {
-  .testimonial__text--icon{
+  .testimonial__text-icon{
 top: 20px;
 left:6px;
 width:60.35px;
@@ -1521,7 +1548,7 @@ height:40px;
 }
 
 @media screen and (min-width: 1280px) {
-  .testimonial__text--icon{
+  .testimonial__text-icon{
 top: 32px;
 left:72px;
 width:54px;
@@ -1779,12 +1806,12 @@ display: none;
 
 
 
-.testimonial__nav--icon{
+.testimonial__nav-icon{
     fill: #D9D9D9;
     cursor: pointer
 }
 
-.testimonial__nav--icon:hover{
+.testimonial__nav-icon:hover{
     /*fill: #D41443;*/
     fill:#D31342
 }
@@ -1866,7 +1893,7 @@ display: none;
 }
 }
 
-.schedule__cafe--last {
+.schedule__cafe-last {
     position: relative;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -1879,7 +1906,7 @@ display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__cafe--last {
+  .schedule__cafe-last {
     padding-left: 32px;
     padding-right: 33px;
     flex-basis: calc((100% - 64px) / 3);
@@ -1887,7 +1914,7 @@ display: none;
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__cafe--last {
+  .schedule__cafe-last {
     padding-left: 40px;
     padding-right: 85px;
     
@@ -1898,7 +1925,7 @@ display: none;
 
 
 
-.schedule__cafe--heading {
+.schedule__cafe-heading {
     color: #FFF;
         text-align: center;
         font-family: "DM Sans";
@@ -1917,7 +1944,7 @@ display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__cafe--heading {
+  .schedule__cafe-heading {
     width: 73px;
     height: 28px;
     font-size: 16px;
@@ -1926,13 +1953,13 @@ display: none;
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__cafe--heading {
+  .schedule__cafe-heading {
     width: 75.103px;
     height: 28px;
 }
 }
 
-.schedule__cafe--location {
+.schedule__cafe-location {
     
     color: #000;
         font-family: "DM Sans";
@@ -1947,7 +1974,7 @@ display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__cafe--location {
+  .schedule__cafe-location {
     font-size: 14px;
     line-height: calc(26.04/14);
     margin-top: 32px;
@@ -1956,7 +1983,7 @@ display: none;
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__cafe--location {
+  .schedule__cafe-location {
     font-size: 16px;
     line-height: calc(29.76/16);
     margin-top: 32px;
@@ -1964,7 +1991,7 @@ display: none;
 }
 }
 
-.schedule__cafe--description {
+.schedule__cafe-description {
    margin-bottom: 64px;
     color: #907E82;
         font-family: "DM Sans";
@@ -1976,25 +2003,23 @@ display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__cafe--description  {
+  .schedule__cafe-description  {
     font-size: 14px;
     line-height: calc(23.24/14);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__cafe--description {
+  .schedule__cafe-description {
      font-size: 16px;
      line-height: calc(29.28/16);
      letter-spacing: 0.04em;
 }
 }
 
-.testimonial__text--icon {
-    fill: #E1E1E1;
-}
 
-.schedule__cafe--topicon{
+
+.schedule__cafe-topicon{
  position: absolute;
   top:166px;
   left:32px;
@@ -2003,7 +2028,7 @@ display: none;
 }
 
  @media screen and (min-width: 768px) {
-  .schedule__cafe--topicon{
+  .schedule__cafe-topicon{
   top:235px;
   left:32px;
   width: 160px;
@@ -2012,7 +2037,7 @@ display: none;
 }
 
  @media screen and (min-width: 1280px) {
-  .schedule__cafe--topicon{
+  .schedule__cafe-topicon{
   top:220px;
   left:40px;   
   width: 288px;
@@ -2020,7 +2045,7 @@ display: none;
 }
 }
 
-.schedule__cafe--bottomicon{
+.schedule__cafe-bottomicon{
  position: absolute;
  top:311px;
  left:32px; 
@@ -2029,7 +2054,7 @@ display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__cafe--bottomicon{
+  .schedule__cafe-bottomicon{
   top:408px;
   left:32px; 
   width: 160px;
@@ -2038,7 +2063,7 @@ display: none;
 }
 
  @media screen and (min-width: 1280px) {
-  .schedule__cafe--bottomicon{
+  .schedule__cafe-bottomicon{
  top:416px;
  left:40px;
  width: 288px;
@@ -2046,7 +2071,7 @@ display: none;
 }
 }
 
-.schedule__cafe--weekdays{
+.schedule__cafe-weekdays{
     display: block;
     color: #000;
         font-family: "DM Sans";
@@ -2058,21 +2083,21 @@ display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__cafe--weekdays{
+  .schedule__cafe-weekdays{
  font-size: 14px;
  line-height: calc(26.04/14);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__cafe--weekdays{
+  .schedule__cafe-weekdays{
     font-size: 16px;
     line-height: calc(29.76/16);
     letter-spacing: 0.04em;
 }
 }
 
-.schedule__cafe--times{
+.schedule__cafe-times{
     color: #FFA5BA;
         font-family: "DM Sans";
         font-size: 12px;
@@ -2083,21 +2108,21 @@ display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__cafe--times{
+  .schedule__cafe-times{
  font-size: 14px;
  line-height: calc(26.04/14);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__cafe--times{
+  .schedule__cafe-times{
     font-size: 16px;
     line-height: calc(29.76/16);
     letter-spacing: 0.04em;
 }
 }
 
-.schedule__cafe--weekends{
+.schedule__cafe-weekends{
     display: block;
     color: #000;
         font-family: "DM Sans";
@@ -2109,21 +2134,21 @@ display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__cafe--weekends{
+  .schedule__cafe-weekends{
  font-size: 14px;
  line-height: calc(26.04/14);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__cafe--weekends{
+  .schedule__cafe-weekends{
     font-size: 16px;
     line-height: calc(29.76/16);
     letter-spacing: 0.04em;
 }
 }
 
-.schedule__cafe--number{
+.schedule__cafe-number{
     display: block;
     margin-top: 48px;
     color: #907E82;
@@ -2135,7 +2160,7 @@ display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__cafe--number{
+  .schedule__cafe-number{
  margin-top: 64px;
  font-size: 14px;
  line-height: calc(25.62/14);
@@ -2143,18 +2168,18 @@ display: none;
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__cafe--number{
+  .schedule__cafe-number{
     font-size: 16px;
     line-height: calc(29.28/16);
     letter-spacing: 0.04em;
 }
 }
 
-.schedule__cafe--number:hover {
+.schedule__cafe-number:hover {
 color: #D41443;
 }
 
-.schedule__cafe--email{
+.schedule__cafe-email{
     
         color: #907E82;
         font-family: "DM Sans";
@@ -2165,21 +2190,21 @@ color: #D41443;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__cafe--email{
+  .schedule__cafe-email{
  font-size: 14px;
  line-height: calc(25.62/14);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__cafe--email{
+  .schedule__cafe-email{
     font-size: 16px;
     line-height: calc(29.28/16);
     letter-spacing: 0.04em;
 }
 }
 
-.schedule__cafe--email:hover {
+.schedule__cafe-email:hover {
     color: #D41443;
 }
 
@@ -2211,7 +2236,7 @@ color: #D41443;
 }
 
 
-.schedule__foodtruck--heading {
+.schedule__foodtruck-heading {
     color: #FFF;
         text-align: center;
         font-family: "DM Sans";
@@ -2231,7 +2256,7 @@ color: #D41443;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__foodtruck--heading {
+  .schedule__foodtruck-heading {
     width: 138px;
     height: 28px;
     font-size: 16px;
@@ -2245,7 +2270,7 @@ color: #D41443;
 }
 }
 
-.schedule__foodtruck--location {
+.schedule__foodtruck-location {
     
     color: #000;
         font-family: "DM Sans";
@@ -2260,7 +2285,7 @@ color: #D41443;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__foodtruck--location {
+  .schedule__foodtruck-location {
     font-size: 14px;
     line-height: calc(26.04/14);
     margin-top: 32px;
@@ -2269,7 +2294,7 @@ color: #D41443;
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__foodtruck--location {
+  .schedule__foodtruck-location {
     font-size: 16px;
     line-height: calc(29.76/16);
     margin-top: 32px;
@@ -2277,7 +2302,7 @@ color: #D41443;
 }
 }
 
-.schedule__foodtruck--description {
+.schedule__foodtruck-description {
    margin-bottom: 64px;
     color: #907E82;
         font-family: "DM Sans";
@@ -2289,25 +2314,22 @@ color: #D41443;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__foodtruck--description  {
+  .schedule__foodtruck-description  {
     font-size: 14px;
     line-height: calc(23.24/14);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__foodtruck--description {
+  .schedule__foodtruck-description {
      font-size: 16px;
      line-height: calc(29.28/16);
      letter-spacing: 0.04em;
 }
 }
 
-.testimonial__text--icon {
-    fill: #E1E1E1;
-}
 
-.schedule__foodtruck--topicon{
+.schedule__foodtruck-topicon{
  position: absolute;
   top:166px;
   left:32px;
@@ -2316,7 +2338,7 @@ color: #D41443;
 }
 
  @media screen and (min-width: 768px) {
-  .schedule__foodtruck--topicon{
+  .schedule__foodtruck-topicon{
   top:235px;
   left:32px;
   width: 160px;
@@ -2325,7 +2347,7 @@ color: #D41443;
 }
 
  @media screen and (min-width: 1280px) {
-  .schedule__foodtruck--topicon{
+  .schedule__foodtruck-topicon{
   top:220px;
   left:40px;   
   width: 288px;
@@ -2333,7 +2355,7 @@ color: #D41443;
 }
 }
 
-.schedule__foodtruck--bottomicon{
+.schedule__foodtruck-bottomicon{
  position: absolute;
  top:311px;
  left:32px; 
@@ -2342,7 +2364,7 @@ color: #D41443;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__foodtruck--bottomicon{
+  .schedule__foodtruck-bottomicon{
   top:408px;
   left:32px; 
   width: 160px;
@@ -2351,7 +2373,7 @@ color: #D41443;
 }
 
  @media screen and (min-width: 1280px) {
-  .schedule__foodtruck--bottomicon{
+  .schedule__foodtruck-bottomicon{
  top:416px;
  left:40px;
  width: 288px;
@@ -2359,7 +2381,7 @@ color: #D41443;
 }
 }
 
-.schedule__foodtruck--weekdays{
+.schedule__foodtruck-weekdays{
     display: block;
     color: #000;
         font-family: "DM Sans";
@@ -2371,21 +2393,21 @@ color: #D41443;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__foodtruck--weekdays{
+  .schedule__foodtruck-weekdays{
  font-size: 14px;
  line-height: calc(26.04/14);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__foodtruck--weekdays{
+  .schedule__foodtruck-weekdays{
     font-size: 16px;
     line-height: calc(29.76/16);
     letter-spacing: 0.04em;
 }
 }
 
-.schedule__foodtruck--times{
+.schedule__foodtruck-times{
     color: #FFA5BA;
         font-family: "DM Sans";
         font-size: 12px;
@@ -2396,21 +2418,21 @@ color: #D41443;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__foodtruck--times{
+  .schedule__foodtruck-times{
  font-size: 14px;
  line-height: calc(26.04/14);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__foodtruck--times{
+  .schedule__foodtruck-times{
     font-size: 16px;
     line-height: calc(29.76/16);
     letter-spacing: 0.04em;
 }
 }
 
-.schedule__foodtruck--weekends{
+.schedule__foodtruck-weekends{
     display: block;
     color: #000;
         font-family: "DM Sans";
@@ -2422,21 +2444,21 @@ color: #D41443;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__foodtruck--weekends{
+  .schedule__foodtruck-weekends{
  font-size: 14px;
  line-height: calc(26.04/14);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__foodtruck--weekends{
+  .schedule__foodtruck-weekends{
     font-size: 16px;
     line-height: calc(29.76/16);
     letter-spacing: 0.04em;
 }
 }
 
-.schedule__foodtruck--number{
+.schedule__foodtruck-number{
     display: block;
     margin-top: 48px;
     color: #907E82;
@@ -2448,7 +2470,7 @@ color: #D41443;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__foodtruck--number{
+  .schedule__foodtruck-number{
  margin-top: 64px;
  font-size: 14px;
  line-height: calc(25.62/14);
@@ -2456,18 +2478,18 @@ color: #D41443;
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__foodtruck--number{
+  .schedule__foodtruck-number{
     font-size: 16px;
     line-height: calc(29.28/16);
     letter-spacing: 0.04em;
 }
 }
 
-.schedule__foodtruck--number:hover {
+.schedule__foodtruck-number:hover {
 color: #D41443;
 }
 
-.schedule__foodtruck--email{
+.schedule__foodtruck-email{
     
         color: #907E82;
         font-family: "DM Sans";
@@ -2478,21 +2500,21 @@ color: #D41443;
 }
 
 @media screen and (min-width: 768px) {
-  .schedule__foodtruck--email{
+  .schedule__foodtruck-email{
  font-size: 14px;
  line-height: calc(25.62/14);
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .schedule__foodtruck--email{
+  .schedule__foodtruck-email{
     font-size: 16px;
     line-height: calc(29.28/16);
     letter-spacing: 0.04em;
 }
 }
 
-.schedule__foodtruck--email:hover {
+.schedule__foodtruck-email:hover {
     color: #D41443;
 }
 
@@ -2523,7 +2545,7 @@ gap: 12px;
 
 
 
-.outlets__locations{
+.outlets__location{
 border-radius: 22px;
 background-color: #D41342;
 color: #FFF;
@@ -2540,7 +2562,7 @@ color: #FFF;
     justify-content: center;
 }
 
-.outlets__locations:hover {
+.outlets__location:hover {
     background-color: #FFF;
     color: #D41443;
     fill: #FFF;
@@ -2568,7 +2590,7 @@ color: #FFF;
 }
 }
 
-.outlets__locations--text {
+.outlets__location-label {
     font-size: 16px;
     line-height: calc(20.83/16);
     margin-right: 8px;
@@ -2579,20 +2601,20 @@ color: #FFF;
 }
 
 @media screen and (min-width: 768px) {
-  .outlets__locations--text {
+  .outlets__location-label {
     margin-right: 13.4px;
     height: 44px;
 }
 }
 
 @media screen and (min-width: 1280px) {
-  .outlets__locations--text {
+  .outlets__location-label {
     margin-right: 13.62px;
     height: 44px;
 }
 }
 
-.outlets__locations--icon{
+.outlets__location-icon{
     width: 8px;
     height: 8px;
 }
@@ -2634,7 +2656,7 @@ padding-right: 31.3px;
 }
 }
 
-.outlets__info--text {
+.outlets__info-label {
     display: block;
     
     height: 44px;
@@ -2645,7 +2667,7 @@ padding-right: 31.3px;
 }
 
 @media screen and (min-width: 768px) {
-  .outlets__info--text {
+  .outlets__info-label {
 
     height: 44px;
     margin-right: 13.17px;
@@ -2653,7 +2675,7 @@ padding-right: 31.3px;
 }
 
 @media screen and (min-width: 1280px) {
-  .outlets__info--text {
+  .outlets__info-label {
     
      height: 44px;
      margin-right: 12.71px;
@@ -2667,7 +2689,7 @@ padding-right: 31.3px;
     stroke: #D41443;
 }
 
-.outlets__info--icon {
+.outlets__info-icon {
     stroke-width: 2px;
     width: 8px;
     height: 8px;
@@ -2735,25 +2757,26 @@ footer{
     margin-bottom: 60px;
 }}
 
-.footer__slogan--bottom{
-    display: flex;
-    flex-direction: column;
+.footer__heading-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap:16px;
 }
 
 @media screen and (min-width: 768px) {
 
-.footer__slogan--bottom{
-   
+.footer__heading-wrapper{
+    gap: 12px;
 }}
 
 @media screen and (min-width: 1280px) {
 
-.footer__slogan--bottom{
-    flex-direction: row;
-    gap: 14px;
+.footer__heading-wrapper{
+     gap: 16px;
 }}
 
-.footer__slogan--top{
+
+.footer__heading{
     color: #FFA5BA;
     font-family: "Titan One";
     font-size: 18px;
@@ -2762,42 +2785,34 @@ footer{
     font-weight: 400;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    margin-bottom: 16px;
 }
 
 @media screen and (min-width: 768px) {
 
-.footer__slogan--top{
+.footer__heading{
     font-size: 26px;
     line-height: calc(29.77/26);
-    margin-bottom: 12px;
 }}
 
 @media screen and (min-width: 1280px) {
 
-.footer__slogan--top{
+.footer__heading{
     font-size: 30px;
     line-height: calc(34.35/30);
-     margin-bottom: 16px;
 }}
 
 
-.footer__slogan--bottom{
+.footer__heading--highlight{
     color: #D41443;
-        font-family: "Titan One";
         font-size: 34px;
         line-height: calc(38.93/34);
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
         display: flex;
     flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
 
-.footer__slogan--bottom{
+.footer__heading--highlight{
     font-size: 48px;
     line-height: calc(54.96/48);
     letter-spacing: 0.06em;
@@ -2805,7 +2820,7 @@ footer{
 
 @media screen and (min-width: 1280px) {
 
-.footer__slogan--bottom{
+.footer__heading--highlight{
     font-size: 58px;
     line-height: calc(66.41/58);
     flex-direction: row;
@@ -2828,7 +2843,7 @@ footer{
 gap:30px;
 }}
 
-.footer__socials--links {
+.footer__socials-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2841,80 +2856,81 @@ gap:30px;
 
 @media screen and (min-width: 768px) {
 
-.footer__socials--links {
+.footer__socials-link {
 width: 34px;
 height: 34px;
 }}
 
+.footer__socials-link:hover{
+    background-color: #D41342;
+}
 
-.footer__socials--icon-git{
+.footer__socials-icon-git{
 width: 18.82px;
 height: 18.82px;
 }
 
 @media screen and (min-width: 768px) {
 
-.footer__socials--icon-git{
+.footer__socials-icon-git{
 width: 20px;
 height: 20px;
 }}
 
 @media screen and (min-width: 1280px) {
 
-.footer__socials--icon-git{
+.footer__socials-icon-git{
     width: 20px;
     height: 20px;
 }}
 
-.footer__socials--icon-telegram{
+.footer__socials-icon-telegram{
 width: 19.2px;
 height: 14.93px;
 }
 
 @media screen and (min-width: 768px) {
 
-.footer__socials--icon-telegram{
+.footer__socials-icon-telegram{
 width: 20.4px;
 height: 15.87px;
 }}
 
 @media screen and (min-width: 1280px) {
 
-.footer__socials--icon-telegram{
+.footer__socials-icon-telegram{
     width: 20.4px;
     height: 15.87px;
 }}
 
-.footer__socials--icon-facebook{
+.footer__socials-icon-facebook{
 width: 8.8px;
 height: 19.2px;
 }
 
 @media screen and (min-width: 768px) {
 
-.footer__socials--icon-facebook{
+.footer__socials-icon-facebook{
 width: 9.35px;
     height: 20.4px;
 }}
 
 @media screen and (min-width: 1280px) {
 
-.footer__socials--icon-facebook{
+.footer__socials-icon-facebook{
     width: 9.35px;
     height: 20.4px;
 }}
 
-.footer__socials--links:hover{
-    background-color: #D41342;
-}
 
-.footer__contacts--item-wrapper{
+
+.footer__phone{
 display: flex;
     justify-content: right;
     align-items: center;
 }
 
-.footer__contacts--label{
+.footer__phone-label{
 color: #000;
     font-family: "DM Sans";
     font-size: 12px;
@@ -2925,24 +2941,21 @@ color: #000;
 
 @media screen and (min-width: 768px) {
 
-.footer__contacts--label{
+.footer__phone-label{
     font-size: 14px;
     line-height: calc(26.04/14);
 }}
 
 @media screen and (min-width: 1280px) {
 
-.footer__contacts--label{
+.footer__phone-label{
     font-size: 16px;
     line-height: calc(29.76/16);
     letter-spacing: 0.02em;
 }}
 
-.footer__socials--links:hover{
-    background-color: #D41342;
-}
 
-.footer__contacts--number{
+.footer__phone-number{
     color: #D41443;
         font-family: "DM Sans";
         font-size: 12px;
@@ -2953,34 +2966,34 @@ color: #000;
 
 @media screen and (min-width: 768px) {
 
-.footer__contacts--number{
+.footer__phone-number{
     font-size: 14px;
     line-height: calc(26.04/14);
 }}
 
 @media screen and (min-width: 1280px) {
 
-.footer__contacts--number{
+.footer__phone-number{
     font-size: 16px;
     line-height: calc(29.76/16);
     letter-spacing: 0.02em;
 }}
 
-.footer__bottom--line{
+.footer__bottom-line{
  width: 320px;
  height: 2px;
 }
 
 @media screen and (min-width: 768px) {
 
-.footer__bottom--line{
+.footer__bottom-line{
   width: 768px;
   height: 2px;
 }}
 
 @media screen and (min-width: 1280px) {
 
-.footer__bottom--line{
+.footer__bottom-line{
     display: block;
     width: 1200px;
     height: 2px;
@@ -2989,7 +3002,7 @@ color: #000;
 
 
 
-.footer__bottom--text{
+.footer__bottom-text{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3006,7 +3019,7 @@ color: #000;
 
 @media screen and (min-width: 768px) {
 
-.footer__bottom--text{
+.footer__bottom-text{
  flex-direction: row;
  gap:5px;
  letter-spacing: 0.02em;
@@ -3016,6 +3029,6 @@ color: #000;
 
 @media screen and (min-width: 1280px) {
 
-.footer__bottom--text{
+.footer__bottom-text{
  
 }}

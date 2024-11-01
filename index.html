@@ -42,7 +42,7 @@
   </button>
 
 
-   <div class="menu menu__is-hidden" header-window>
+   <div class="menu menu--hidden" header-window>
                 <div class="header-window">
                 <button type="button" class="header-window__button" header-window-close>
                     <svg width="14px" height="14px" class="header-window__close-icon">
@@ -50,7 +50,7 @@
                     </svg></button>
 
                          <a class="header-window__link" href="#">
-                          <span class="header-window__items">
+                          <span class="header-window__link-content">
                           <span class="header-window__label">Buy now</span>  
                            <svg class="header-window__icon" width="5.26" height="8">
                             <use href="./images/icons.svg#icon-Vector3"></use>
@@ -59,14 +59,14 @@
                          </a>
 
                     <nav class="header-window__nav">
-                        <ul class="header-window__list">
+                        <ul class="header-window__nav-list">
                     
-                            <li class="header-window__item"><a href="#" class="header-window__link-item">Home</a>
+                            <li class="header-window__nav-item"><a href="#" class="header-window__nav-link">Home</a>
                             </li>
-                            <li class="header-window__item"><a href="#" class="header-window__link-item">About us</a></li>
-                            <li class="header-window__item"><a href="#" class="header-window__link-item">How it's made</a></li>
-                            <li class="header-window__item"><a href="#" class="header-window__link-item">Our products</a></li>
-                            <li class="header-window__item"><a href="#" class="header-window__link-item">Contact</a></li>
+                            <li class="header-window__nav-item"><a href="#" class="header-window__nav-link">About us</a></li>
+                            <li class="header-window__nav-item"><a href="#" class="header-window__nav-link">How it's made</a></li>
+                            <li class="header-window__nav-item"><a href="#" class="header-window__nav-link">Our products</a></li>
+                            <li class="header-window__nav-item"><a href="#" class="header-window__nav-link">Contact</a></li>
                         </ul>
                     </nav>
 
@@ -181,22 +181,22 @@
 
        <div class="company">
        <div class="company__info">
-        <span class="company__info--num">
-        <span class="company__info--cafes">16</span>    
-        <span class="company__info--text">cafes</span>
+        <span class="company__info-content">
+        <span class="company__info-digit">16</span>    
+        <span class="company__info-text">cafes</span>
         </span>
-        <svg class="company__info--icon">
+        <svg class="company__info-icon">
             <use href="./images/icons.svg#icon-Ellipse"></use>
         </svg>
        </div>
        
 
        <div class="company__info">
-        <span class="company__info--num">
-        <span class="company__info--trucks">23</span> 
-        <span class="company__info--text">food trucks</span>
+        <span class="company__info-content">
+        <span class="company__info-num">23</span> 
+        <span class="company__info-text">food trucks</span>
         </span>
-        <svg class="company__info--icon">
+        <svg class="company__info-icon">
             <use href="./images/icons.svg#icon-Ellipse"></use>
         </svg>
        </div>
@@ -231,11 +231,13 @@
 
     <section class="products">
         <div class="products__container container">
-         <h2 class="products__description">100% natural</h2>
-         <h2 class="products__heading">PRODUCTS</h2>
+          <div class="products__heading-wrapper">
+         <h2 class="products__heading">100% natural</h2>
+         <h2 class="products__heading products__heading--highlight">PRODUCTS</h2>
+         </div>
         <ul class="products__illustrations">
-          <li class="products__illustrations--item">
-             <div class="products__illustrations--cover">
+          <li class="products__illustrations-item">
+             <div class="products__illustrations-cover">
                  <picture>
                         <source
                         srcset="
@@ -265,23 +267,23 @@
                         </picture>
              
              </div>
-             <div class="products__illustrations--info">
-               <h3 class="products__illustrations--heading">ICE CREAM</h3>
-               <svg class="products__illustrations--icon">
+             <div class="products__illustrations-info">
+               <h3 class="products__illustrations-heading">ICE CREAM</h3>
+               <svg class="products__illustrations-icon">
                  <use href="./images/icons.svg#icon-Group-4"></use>
                </svg>
-                <div class="products__illustrations--details">
+                <div class="products__illustrations-details">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 </div>
-                <a href="#" class="products__illustrations--nav">
+                <a href="#" class="products__illustrations-nav">
                   <img src="./images/arrow-right2.jpg" 
                      srcset="./images/arrow-right2@2x.png 2x" 
                      alt="arrow-right">
                 </a>
              </div>
           </li>
-          <li class="products__illustrations--item">
-             <div class="products__illustrations--cover">
+          <li class="products__illustrations-item">
+             <div class="products__illustrations-cover">
                <picture>
                         <source
                         srcset="
@@ -310,23 +312,23 @@
                          <img src="./images/product-pic2_mobile.png" alt="product">
                         </picture>
              </div>
-            <div class="products__illustrations--info">
-              <h3 class="products__illustrations--heading">ICE CREAM</h3>
-              <svg class="products__illustrations--icon">
+            <div class="products__illustrations-info">
+              <h3 class="products__illustrations-heading">ICE CREAM</h3>
+              <svg class="products__illustrations-icon">
                 <use href="./images/icons.svg#icon-Group-4"></use>
               </svg>
-              <div class="products__illustrations--details">
+              <div class="products__illustrations-details">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               </div>
-            <a href="#" class="products__illustrations--nav">
+            <a href="#" class="products__illustrations-nav">
               <img src="./images/arrow-right2.jpg" 
                      srcset="./images/arrow-right2@2x.png 2x" 
                      alt="arrow-right">
             </a>
             </div>
           </li>
-          <li class="products__illustrations--item">
-             <div class="products__illustrations--cover">
+          <li class="products__illustrations-item">
+             <div class="products__illustrations-cover">
                <picture>
                         <source
                         srcset="
@@ -355,15 +357,15 @@
                          <img src="./images/product-pic3_mobile.png" alt="product">
                         </picture>
              </div>
-            <div class="products__illustrations--info">
-              <h3 class="products__illustrations--heading">ICE CREAM</h3>
-              <svg class="products__illustrations--icon">
+            <div class="products__illustrations-info">
+              <h3 class="products__illustrations-heading">ICE CREAM</h3>
+              <svg class="products__illustrations-icon">
                 <use href="./images/icons.svg#icon-Group-4"></use>
               </svg>
-            <div class="products__illustrations--details">
+            <div class="products__illustrations-details">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             </div>
-            <a href="#" class="products__illustrations--nav">
+            <a href="#" class="products__illustrations-nav">
               <img src="./images/arrow-right2.jpg" 
                      srcset="./images/arrow-right2@2x.png 2x" 
                      alt="arrow-right">
@@ -376,8 +378,10 @@
 
     <section class="production">
       <div class="production__container container">
-        <h3 class="production__slogan">tradition and love</h3>
-        <h2 class="production__heading">how it's made?</h2>
+        <div class="production__heading-wrapper">
+        <h3 class="production__heading">tradition and love</h3>
+        <h2 class="production__heading production__heading--highlight">how it's made?</h2>
+      </div>
       </div>
       <div class="production__background">
 
@@ -422,45 +426,45 @@
         <img src="images/productionsection1_mobile.png" />
         </picture>
         </div>
-        <p class="production__details--start">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
+        <p class="production__details-start">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
         Maecenas eleifend erat at justo fringilla.
         </p>
-        <p class="production__details--end">
+        <p class="production__details-end">
         Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
 
         Aliquam erat volutpat. Aenean accumsan.
         </p>
-        <a href="#" class="production__details--nav">
-          <span class="production__details--text">
+        <a href="#" class="production__details-link">
+          <span class="production__details-label">
           Read more
           </span>
-          <svg class="production__details--icon" width="8" height="10">
+          <svg class="production__details-icon" width="8" height="10">
             <use href="./images/icons.svg#icon-Vector3"></use>
           </svg>
         </a>
       </div>
       </div>
       <div class="production__formula container">
-        <div class="production__formula--item">
-          <svg class="production__formula--icon1">
+        <div class="production__formula-item">
+          <svg class="production__formula-icon1">
             <use href="./images/icons.svg#icon-formula1"></use>
           </svg>
-          <h2 class="production__formula--number">721</h2>
-          <p class="production__formula--text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+          <h2 class="production__formula-number">721</h2>
+          <p class="production__formula-text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
         </div>
-        <div class="production__formula--item">
-          <svg class="production__formula--icon2">
+        <div class="production__formula-item">
+          <svg class="production__formula-icon2">
             <use href="./images/icons.svg#icon-formula2"></use>
           </svg>
-          <h2 class="production__formula--number">16kg</h2>
-          <p class="production__formula--text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+          <h2 class="production__formula-number">16kg</h2>
+          <p class="production__formula-text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
         </div>
-        <div class="production__formula--item">
-          <svg class="production__formula--icon3">
+        <div class="production__formula-item">
+          <svg class="production__formula-icon3">
             <use href="./images/icons.svg#icon-formula3"></use>
           </svg>
-          <h2 class="production__formula--number">84</h2>
-          <p class="production__formula--text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+          <h2 class="production__formula-number">84</h2>
+          <p class="production__formula-text">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
         </div>
       </div>
       <div class="gallery">
@@ -491,11 +495,11 @@
                         <img src="./images/gallery_mobile.png " alt="samples-pic" class="galllery__pics">
         </picture>
 </div>
-      <div class="testimonials container">
+      <div class="testimonial container">
       <div class="testimonial__modal">
         <img class="testimonial__image" src="./images/testimonial1.jpg" srcset="./images/testimonial1@2x.png 2x" alt="customer-pic">
         <div class="testimonial__label">
-          <svg class="testimonial__text--icon">
+          <svg class="testimonial__text-icon">
            <use href="./images/icons.svg#icon-comma"></use>
           </svg>
           <svg class="testimonial__underline1">
@@ -533,13 +537,13 @@
         </svg>
         <p class="testimonial__bio">Emily, Los Angeles</p>
          <div class="testimonial__nav">
-          <svg class="testimonial__nav--icon" width="12" height="12">
+          <svg class="testimonial__nav-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-Frame1"></use>
           </svg>
-          <svg class="testimonial__nav--icon" width="12" height="12">
+          <svg class="testimonial__nav-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-testimonial-circle"></use>
           </svg>
-          <svg class="testimonial__nav--icon" width="12" height="12">
+          <svg class="testimonial__nav-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-testimonial-circle"></use>
           </svg>
           </div>
@@ -547,7 +551,7 @@
       <div class="testimonial__modal">
         <img class="testimonial__image" src="./images/testimonial2.jpg" srcset="./images/testimonial2@2x.png 2x" alt="customer-pic">
         <div class="testimonial__label">
-         <svg class="testimonial__text--icon" width="54px" height="40px">
+         <svg class="testimonial__text-icon" width="54px" height="40px">
            <use href="./images/icons.svg#icon-comma"></use>
           </svg>
           <svg class="testimonial__underline1">
@@ -585,13 +589,13 @@
         </svg>
         <p class="testimonial__bio">Emily, Los Angeles</p>
          <div class="testimonial__nav">
-          <svg class="testimonial__nav--icon" width="12" height="12">
+          <svg class="testimonial__nav-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-testimonial-circle"></use>
           </svg>
-          <svg class="testimonial__nav--icon" width="12" height="12">
+          <svg class="testimonial__nav-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-Frame1"></use>
           </svg>
-          <svg class="testimonial__nav--icon" width="12" height="12">
+          <svg class="testimonial__nav-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-testimonial-circle"></use>
           </svg>
           </div>
@@ -599,7 +603,7 @@
       <div class="testimonial__modal">
         <img class="testimonial__image" src="./images/testimonial3.jpg" srcset="./images/testimonial3@2x.png 2x" alt="customer-pic">
         <div class="testimonial__label">
-          <svg class="testimonial__text--icon" width="54px" height="40px">
+          <svg class="testimonial__text-icon" width="54px" height="40px">
            <use href="./images/icons.svg#icon-comma"></use>
           </svg>
         <svg class="testimonial__underline1">
@@ -638,13 +642,13 @@
         </svg>
         <p class="testimonial__bio">Emily, Los Angeles</p>
         <div class="testimonial__nav">
-          <svg class="testimonial__nav--icon" width="12" height="12">
+          <svg class="testimonial__nav-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-testimonial-circle"></use>
           </svg>
-          <svg class="testimonial__nav--icon" width="12" height="12">
+          <svg class="testimonial__nav-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-testimonial-circle"></use>
           </svg>
-          <svg class="testimonial__nav--icon" width="12" height="12">
+          <svg class="testimonial__nav-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-Frame1"></use>
           </svg>
           </div>
@@ -653,70 +657,70 @@
       </div>
        <div class="schedule schedule__container">
             <div class="schedule__cafe">
-              <h3 class="schedule__cafe--heading">CAFE</h3>
-              <span class="schedule__cafe--location">Chicago</span>
-              <p class="schedule__cafe--description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
-              <svg class="schedule__cafe--topicon">
+              <h3 class="schedule__cafe-heading">CAFE</h3>
+              <span class="schedule__cafe-location">Chicago</span>
+              <p class="schedule__cafe-description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+              <svg class="schedule__cafe-topicon">
                 <use href="./images/icons.svg#icon-line"></use>
               </svg>
-               <svg class="schedule__cafe--bottomicon">
+               <svg class="schedule__cafe-bottomicon">
                 <use href="./images/icons.svg#icon-line"></use>
               </svg>
-              <span class="schedule__cafe--weekdays">Monday - Friday</span>
-              <span class="schedule__cafe--times">06:00 AM - 10:00 PM</span>
-              <span class="schedule__cafe--weekends">Saturday - Sunday</span>
-              <span class="schedule__cafe--times">08:00 AM - 16:00 PM</span>
-              <a class="schedule__cafe--number" href="">+61(0) 383 766 284</a>
-              <a class="schedule__cafe--email" href="">noreply@envato.com</a>
+              <span class="schedule__cafe-weekdays">Monday - Friday</span>
+              <span class="schedule__cafe-times">06:00 AM - 10:00 PM</span>
+              <span class="schedule__cafe-weekends">Saturday - Sunday</span>
+              <span class="schedule__cafe-times">08:00 AM - 16:00 PM</span>
+              <a class="schedule__cafe-number" href="">+61(0) 383 766 284</a>
+              <a class="schedule__cafe-email" href="">noreply@envato.com</a>
             </div>
             <div class="schedule__foodtruck">
-             <h3 class="schedule__foodtruck--heading">FOOD TRUCK</h3>
-              <span class="schedule__foodtruck--location">Los Angeles</span>
-              <p class="schedule__foodtruck--description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
-              <svg class="schedule__foodtruck--topicon" width="288" height="2">
+             <h3 class="schedule__foodtruck-heading">FOOD TRUCK</h3>
+              <span class="schedule__foodtruck-location">Los Angeles</span>
+              <p class="schedule__foodtruck-description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+              <svg class="schedule__foodtruck-topicon" width="288" height="2">
                 <use href="./images/icons.svg#icon-line"></use>
               </svg>
-               <svg class="schedule__foodtruck--bottomicon" width="288" height="2">
+               <svg class="schedule__foodtruck-bottomicon" width="288" height="2">
                 <use href="./images/icons.svg#icon-line"></use>
               </svg>
-              <span class="schedule__foodtruck--weekdays">Monday - Friday</span>
-              <span class="schedule__foodtruck--times">06:00 AM - 10:00 PM</span>
-              <span class="schedule__foodtruck--weekends">Saturday - Sunday</span>
-              <span class="schedule__foodtruck--times">08:00 AM - 16:00 PM</span>
-              <a class="schedule__foodtruck--number" href="">+61(0) 383 766 284</a>
-              <a class="schedule__foodtruck--email" href="">noreply@envato.com</a>
+              <span class="schedule__foodtruck-weekdays">Monday - Friday</span>
+              <span class="schedule__foodtruck-times">06:00 AM - 10:00 PM</span>
+              <span class="schedule__foodtruck-weekends">Saturday - Sunday</span>
+              <span class="schedule__foodtruck-times">08:00 AM - 16:00 PM</span>
+              <a class="schedule__foodtruck-number" href="">+61(0) 383 766 284</a>
+              <a class="schedule__foodtruck-email" href="">noreply@envato.com</a>
             </div>
-            <div class="schedule__cafe--last">
-              <h3 class="schedule__cafe--heading">CAFE</h3>
-              <span class="schedule__cafe--location">New York</span>
-              <p class="schedule__cafe--description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
-              <svg class="schedule__cafe--topicon" width="288" height="2">
+            <div class="schedule__cafe-last">
+              <h3 class="schedule__cafe-heading">CAFE</h3>
+              <span class="schedule__cafe-location">New York</span>
+              <p class="schedule__cafe-description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+              <svg class="schedule__cafe-topicon" width="288" height="2">
                 <use href="./images/icons.svg#icon-line"></use>
               </svg>
-               <svg class="schedule__cafe--bottomicon" width="288" height="2">
+               <svg class="schedule__cafe-bottomicon" width="288" height="2">
                 <use href="./images/icons.svg#icon-line"></use>
               </svg>
-              <span class="schedule__cafe--weekdays">Monday - Friday</span>
-              <span class="schedule__cafe--times">06:00 AM - 10:00 PM</span>
-              <span class="schedule__cafe--weekends">Saturday - Sunday</span>
-              <span class="schedule__cafe--times">08:00 AM - 16:00 PM</span>
-              <a class="schedule__cafe--number" href="#">+61(0) 383 766 284</a>
-              <a class="schedule__cafe--email" href="#">noreply@envato.com</a>
+              <span class="schedule__cafe-weekdays">Monday - Friday</span>
+              <span class="schedule__cafe-times">06:00 AM - 10:00 PM</span>
+              <span class="schedule__cafe-weekends">Saturday - Sunday</span>
+              <span class="schedule__cafe-times">08:00 AM - 16:00 PM</span>
+              <a class="schedule__cafe-number" href="#">+61(0) 383 766 284</a>
+              <a class="schedule__cafe-email" href="#">noreply@envato.com</a>
             </div>
             </div>
            <div class="outlets">
-              <a href="#" class="outlets__locations">
+              <a href="#" class="outlets__location">
                 <span class="outlets__location-wrapper">
-                <span class="outlets__locations--text">Our Locations</span>
-                <svg class="outlets__locations--icon">
+                <span class="outlets__location-label">Our Locations</span>
+                <svg class="outlets__location-icon">
                   <use href="./images/icons.svg#icon-Vector3"></use>
                 </svg>
                 </span>
               </a>
               <a href="#" class="outlets__info">
                 <span class="outlets__info-wrapper">
-                <span class="outlets__info--text">Franchise</span>
-                <svg class="outlets__info--icon">
+                <span class="outlets__info-label">Franchise</span>
+                <svg class="outlets__info-icon">
                   <use href="./images/icons.svg#icon-Vector3"></use>
                 </svg>
                 </span>
@@ -727,41 +731,41 @@
     <footer>
      <div>
       <div class="footer__top footer__container">
-      <div class="footer__slogan">
-       <h3 class="footer__slogan--top">homemade ice cream made</h3>
-       <h2 class="footer__slogan--bottom"><span>with</span><span>passion</span></h2>
+      <div class="footer__heading-wrapper">
+       <h3 class="footer__heading">homemade ice cream made</h3>
+       <h2 class="footer__heading footer__heading--highlight"><span>with</span><span>passion</span></h2>
        </div>
        <div class="footer__contacts">
           <div class="footer__socials">
-         <a class="footer__socials--links" href="#">
-          <svg class="footer__socials--icon-git">
+         <a class="footer__socials-link" href="#">
+          <svg class="footer__socials-icon-git">
           <use href="./images/icons.svg#icon-github"></use>
          </svg>
         </a>
-        <a class="footer__socials--links" href="#">
-         <svg class="footer__socials--icon-telegram">
+        <a class="footer__socials-link" href="#">
+         <svg class="footer__socials-icon-telegram">
           <use href="./images/icons.svg#icon-telegram2"></use>
          </svg>
          </a>
-         <a class="footer__socials--links" href="#">
-         <svg class="footer__socials--icon-facebook">
+         <a class="footer__socials-link" href="#">
+         <svg class="footer__socials-icon-facebook">
           <use href="./images/icons.svg#icon-facebook2"></use>
          </svg>
          </a>
         </div>
-        <div class="footer__contacts--item-wrapper"><a class="footer__contacts--item" href="tel:+61 (0) 383 766 284">
-          <span class="footer__contacts--label">Feel free to contact </span>
-          <span class="footer__contacts--number">+61 (0) 383 766 284</span>
+        <div class="footer__phone"><a class="footer__contacts--item" href="tel:+61 (0) 383 766 284">
+          <span class="footer__phone-label">Feel free to contact </span>
+          <span class="footer__phone-number">+61 (0) 383 766 284</span>
         </a>
         </div>
        </div>
        </div>
 
        <div class="footer__bottom">
-        <svg class="footer__bottom--line">
+        <svg class="footer__bottom-line">
           <use href="./images/icons.svg#icon-footerline"></use>
         </svg>
-        <span class="footer__bottom--text"> <span>© 2022 - IceCream.</span> <span>Rights Reserved.</span> </span>
+        <span class="footer__bottom-text"> <span>© 2022 - IceCream.</span> <span>Rights Reserved.</span> </span>
        </div>
      </div>
     </footer>
