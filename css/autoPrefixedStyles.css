@@ -3264,6 +3264,8 @@ color: #000;
 }}
 
 .footer__bottom-line{
+ display: block;   
+ margin: 0 auto;
  width: 320px;
  height: 2px;
 }
@@ -3278,10 +3280,8 @@ color: #000;
 @media screen and (min-width: 1280px) {
 
 .footer__bottom-line{
-    display: block;
     width: 1200px;
     height: 2px;
-    margin: 0 auto;
 }}
 
 
