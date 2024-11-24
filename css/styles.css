@@ -150,6 +150,7 @@ body {
   opacity: 0;
   visibility: hidden;
   left: 100%;
+  /*top: -100%;*/
   pointer-events: none;
 }
 
